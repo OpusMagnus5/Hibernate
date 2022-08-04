@@ -4,9 +4,20 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 public class main {
+    public static SessionFactory sessionFactory;
+
     public static void main(String[] args) {
-        SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+        sessionFactory = new Configuration().configure().buildSessionFactory();
+
+        User user = new User();
+        user.setName("Damian");
+        user.setSurname("Bodzioch");
+        user.setSex(User.Sex.MEN);
+    }
+
+    public static void persistUser(User user){
+
     }
 }
 
-//TODO 2:50
+//TODO 3:44
